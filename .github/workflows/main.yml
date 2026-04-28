@@ -1,6 +1,8 @@
 name: CI
 
-on: [push, pull_request]
+on:
+  push:
+  pull_request:
 
 jobs:
   build:
@@ -18,7 +20,7 @@ jobs:
           haxe-version: 4.3.5
 
       - name: Install
-        # at some point all npm needs to be in package.json
+        # at some point, all npm needs to be in package.json
         run: |
           npm install
           npm install -g less@2.7
